@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection.Metadata.Ecma335;
 using ArduinoUploader;
 using CommandLine;
 using NLog;
@@ -43,15 +44,18 @@ namespace ArduinoSketchUploader
         private static void Main(string[] args)
         {
             var logger = new ArduinoSketchUploaderLogger();
-            var commandLineOptions = new CommandLineOptions();
-            if (!Parser.Default.ParseArguments(args, commandLineOptions)) return;
-
-            var options = new ArduinoSketchUploaderOptions
+            ArduinoSketchUploaderOptions options = null;
+            Parser.Default.ParseArguments<CommandLineOptions>(args).WithParsed<CommandLineOptions>(o =>
             {
-                PortName = commandLineOptions.PortName,
-                FileName = commandLineOptions.FileName,
-                ArduinoModel = commandLineOptions.ArduinoModel
-            };
+                options = new ArduinoSketchUploaderOptions
+                {
+                    PortName = o.PortName,
+                    FileName = o.FileName,
+                    ArduinoModel = o.ArduinoModel
+                };
+            });
+
+            if (options == null) return;
 
             var progress = new Progress<double>(
                 p => logger.Info($"Upload progress: {p * 100:F1}% ..."));

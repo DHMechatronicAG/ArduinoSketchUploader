@@ -4,6 +4,10 @@ This repository contains a .NET library and a corresponding Windows command line
 
 ![ArduinoSketchUploader](https://github.com/christophediericx/ArduinoSketchUploader/blob/master/Images/ArduinoSketchUploader.png)
 
+# Fork Changes
+
+Changed project types to .NET Core 3.1 and upgraded all NuGet references and made changes to fit.
+
 ## Compatibility ##
 
 The library has been tested with the following configurations:
