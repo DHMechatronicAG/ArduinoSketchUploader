@@ -13,8 +13,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ArduinoUploader.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="IntelHexFormatReader" Version="2.2.3" />
     <PackageReference Include="SerialPortStream" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="ArduinoUploader.xml" />
   </ItemGroup>
 
 </Project>

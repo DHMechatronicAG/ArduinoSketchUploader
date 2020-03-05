@@ -8,6 +8,7 @@
         Micro,
         NanoR2,
         NanoR3,
-        UnoR3
+        UnoR3,
+        Pro
     }
 }
