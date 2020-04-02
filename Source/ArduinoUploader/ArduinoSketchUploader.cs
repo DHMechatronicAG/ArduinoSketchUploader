@@ -105,6 +105,8 @@ namespace ArduinoUploader
                     modelOptions.BaudRate, preOpenResetBehavior, postOpenResetBehavior, closeResetBehavior,
                     modelOptions.SleepAfterOpen, modelOptions.ReadTimeout, modelOptions.WriteTimeout);
 
+                serialPortConfig.DTRPin = _options.DTRPin;
+
                 switch (modelOptions.Protocol)
                 {
                     case Protocol.Avr109: programmer = new Avr109BootloaderProgrammer(serialPortConfig, mcu); break;

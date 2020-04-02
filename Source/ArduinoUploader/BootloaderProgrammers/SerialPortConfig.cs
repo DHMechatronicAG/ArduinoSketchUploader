@@ -1,4 +1,5 @@
-﻿using ArduinoUploader.BootloaderProgrammers.ResetBehavior;
+﻿using System;
+using ArduinoUploader.BootloaderProgrammers.ResetBehavior;
 
 namespace ArduinoUploader.BootloaderProgrammers
 {
@@ -34,5 +35,7 @@ namespace ArduinoUploader.BootloaderProgrammers
         public int SleepAfterOpen { get; set; }
         public int ReadTimeOut { get; set; }
         public int WriteTimeOut { get; set; }
+
+        public Int32? DTRPin { get; set; }
     }
 }

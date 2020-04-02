@@ -1,4 +1,5 @@
-﻿using ArduinoUploader.Hardware;
+﻿using System;
+using ArduinoUploader.Hardware;
 
 namespace ArduinoUploader
 {
@@ -9,5 +10,7 @@ namespace ArduinoUploader
         public string PortName { get; set; }
 
         public ArduinoModel ArduinoModel { get; set; }
+
+        public Int32? DTRPin { get; set; }
     }
 }
