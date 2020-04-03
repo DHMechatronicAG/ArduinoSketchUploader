@@ -21,7 +21,7 @@ namespace ArduinoUploader.BootloaderProgrammers.ResetBehavior
             {
                 if (this.Controller == null)
                 {
-                    this.Controller = new GpioController();
+                    this.Controller = new GpioController(PinNumberingScheme.Board);
                     this.Controller.OpenPin(config.DTRPin.Value, PinMode.Output);
                 }
 
