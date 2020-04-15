@@ -6,7 +6,7 @@ This repository contains a .NET library and a corresponding Windows command line
 
 # Fork Changes
 
-Changed project types to .NET Core 3.1 and upgraded all NuGet references and made changes to fit.
+Support DTR via GPIO (Can be set via options; tested on Raspberry Pi 3B+ with Andino X1). Changed project types to .NET Core 3.1 and upgraded all NuGet references and made changes to fit.
 
 ## Compatibility ##
 
@@ -21,6 +21,7 @@ The library has been tested with the following configurations:
 | Nano (R2)     | ATMega168     |  [STK500v1](/Documentation/STK500v1.pdf)           |
 | Nano (R3)     | ATMega328P    | [STK500v1](/Documentation/STK500v1.pdf)            |
 | Uno (R3)      | ATMega328P    | [STK500v1](/Documentation/STK500v1.pdf)            |
+| Pro           | ATMega328P    | [STK500v1](/Documentation/STK500v1.pdf)            |
 
 > *If you have a need for this library to run on another Arduino model, feel free to open an issue on GitHub, it should be relatively straightforward to add support (for most).*
 
